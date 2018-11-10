@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <myview.com.myview.view.ChargeView
+        android:id="@+id/cv_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cv_anim_duration="3"
+        app:cv_item_charge_end_color="#95D8FF"
+        app:cv_item_charge_start_color="#0E74A7"
+        app:cv_item_count="20"
+        app:cv_item_height="16dp"
+        app:cv_border_cornor_radius="2dp"
+        app:cv_item_width="6dp" />
+
+    <myview.com.myview.view.ClearEditTextHighlight
+        android:id="@+id/cet_phone"
+        style="@style/input_edittext_style"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp" />
+
+    <myview.com.myview.view.ClearEditTextPwd
+        android:id="@+id/cets_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"></myview.com.myview.view.ClearEditTextPwd>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="展示充电动画" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="停止充电动画" />
+</LinearLayout>

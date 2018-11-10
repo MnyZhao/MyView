@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChargeView">
+        <!--进度条个数-->
+        <attr name="cv_item_count" format="integer" />
+        <!--间隔宽度-->
+        <attr name="cv_split_width" format="dimension" />
+        <!--进度条宽度-->
+        <attr name="cv_item_width" format="dimension" />
+        <!--进度条高度-->
+        <attr name="cv_item_height" format="dimension" />
+        <!--圆角半径-->
+        <attr name="cv_border_cornor_radius" format="dimension" />
+        <!--充电中开始的颜色-->
+        <attr name="cv_item_charge_start_color" format="color" />
+        <!--充电结束时的颜色-->
+        <attr name="cv_item_charge_end_color" format="color" />
+        <!--充电内模块的背景色，未充电的颜色-->
+        <attr name="cv_item_unCharge_color" format="color" />
+        <!--动画时长-->
+        <attr name="cv_anim_duration" format="integer" />
+        <!--progrss-->
+        <attr name="cv_progress" format="integer" />
+        <!--边框线的宽度-->
+        <attr name="cv_storke_width" format="dimension" />
+    </declare-styleable>
+</resources>

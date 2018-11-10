@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="pwd_right_style">
+        <item name="android:layout_width">@dimen/edittext_pwd_drawable_right_size</item>
+        <item name="android:layout_height">@dimen/edittext_pwd_drawable_right_size</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">0</item>
+        <item name="android:padding">@dimen/edittext_pwd_drawable_right_padding</item>
+    </style>
+    <!--控制输入框的样式以及左侧按钮大小等-->
+    <style name="input_edittext_style">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">10dp</item>
+        <!--edittext 左内边距 可选 经测试10dp 比较合适-->
+        <item name="android:paddingLeft">0dp</item>
+        <!--edittext 右内边距 可选 经测试10dp 比较合适-->
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="mClearEditText_leftDrawableSize">@dimen/edittext_left_drawable_size</item>
+        <item name="mClearEditText_showBottomLine">false</item>
+    </style>
+</resources>
