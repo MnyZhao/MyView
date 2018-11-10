@@ -35,8 +35,6 @@ public class ChargeView extends View {
     private float mItemHeight;
     /*圆角半径*/
     private float mItemRadios;
-    /*充电中的颜色*/
-    private int mChargeColor;
     /*未充电的颜色*/
     private int mUnChargeColor;
     /*动画时间*/
