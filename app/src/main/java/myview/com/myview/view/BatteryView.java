@@ -161,11 +161,11 @@ public class BatteryView extends View {
             canvas.drawRect(rectF, mPaint);
             if (isSet) {
                 if (i == setProNum - 1) {
-                    drawRoundRect(i, canvas, mProgress);
+                    drawRoundRect(i, canvas, setCountProgress);
                 }
             } else {
                 if (i == currentProNum - 1) {
-                    drawRoundRect(i, canvas, setCountProgress);
+                    drawRoundRect(i, canvas, mProgress);
                 }
             }
         }
@@ -185,7 +185,7 @@ public class BatteryView extends View {
                 (position + 1) * mItemWidth + position * mSplitWidth,
                 mItemHeight * publicViewHeight);
         canvas.drawRoundRect(rectRoundF, 50, 50, mPaint);
-        drawText(rectRoundF, String.valueOf(mProgress), canvas);
+        drawText(rectRoundF, String.valueOf(progress), canvas);
     }
 
     /**
