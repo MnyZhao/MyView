@@ -6,6 +6,7 @@ import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 
+import myview.com.myview.view.BatteryView;
 import myview.com.myview.view.ChargeView;
 import myview.com.myview.view.ClearEditTextHighlight;
 import myview.com.myview.view.ClearEditTextPwd;
@@ -32,8 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
     }
 
+    BatteryView mBv;
+
     private void initView() {
-        mCvView=findViewById(R.id.cv_view);
+        mCvView = findViewById(R.id.cv_view);
         mCetPhone = (ClearEditTextHighlight) findViewById(R.id.cet_phone);
         mCetPhone.setInputType(InputType.TYPE_CLASS_NUMBER);
         mCetsPwd = (ClearEditTextPwd) findViewById(R.id.cets_pwd);
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnStart.setOnClickListener(this);
         mBtnStop = (Button) findViewById(R.id.btnStop);
         mBtnStop.setOnClickListener(this);
+        mBv = findViewById(R.id.bv);
+        findViewById(R.id.btn_set).setOnClickListener(this);
     }
 
     @Override
@@ -50,11 +55,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
             case R.id.btnStart:
-                mCvView.setProgress(100);
+                mCvView.setProgress(90);
                 mCvView.setAnimation();
                 break;
             case R.id.btnStop:
                 mCvView.closeAnimation(100);
+                break;
+            case R.id.btn_set:
+                mBv.setCurrentProgress(100);
+                mBv.setAnimation();
                 break;
         }
     }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BatteryView">
+        <!--进度条个数-->
+        <attr name="b_item_count" format="integer" />
+        <!--圆角半径-->
+        <attr name="_border_cornor_radius" format="dimension" />
+        <!--渐变开始的颜色-->
+        <attr name="b_item_start_color" format="color" />
+        <!--渐变结束时的颜色-->
+        <attr name="b_item_end_color" format="color" />
+        <!--默认颜色-->
+        <attr name="b_item_default_color" format="color" />
+        <!--动画时长-->
+        <attr name="b_anim_duration" format="integer" />
+        <!--progrss-->
+        <attr name="b_progress" format="integer" />
+        <!--边框线的宽度-->
+        <attr name="b_storke_width" format="dimension" />
+        <!--圆角半径-->
+        <attr name="b_border_cornor_radius" format="dimension" />
+
+    </declare-styleable>
+</resources>

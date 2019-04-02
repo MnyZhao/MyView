@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:cv_anim_duration="3"
+        app:cv_anim_duration="10"
         app:cv_item_charge_end_color="#95D8FF"
         app:cv_item_charge_start_color="#0E74A7"
         app:cv_item_count="20"
@@ -47,4 +47,23 @@
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:text="停止充电动画" />
+    <myview.com.myview.view.BatteryView
+        android:id="@+id/bv"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        app:b_progress="100"
+        app:b_anim_duration="2"
+        app:b_border_cornor_radius="1dp"
+        app:b_item_count="15"
+        app:b_item_end_color="#FF8869"
+        app:b_item_start_color="#1E69FE" />
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="setProgress" />
 </LinearLayout>

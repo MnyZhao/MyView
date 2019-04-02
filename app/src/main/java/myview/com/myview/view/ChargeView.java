@@ -171,12 +171,13 @@ public class ChargeView extends View {
         } else {
             anim.setRepeatCount(ValueAnimator.INFINITE);
         }
-        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+        //属性动画监听事件
+        /*anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 invalidate();
             }
-        });
+        });*/
         anim.start();
     }
 
