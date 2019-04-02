@@ -66,6 +66,8 @@ public class BatteryView extends View {
      * 默认为2  也就是二分之一{@link #mItemHeight} 的高度 可以根据显示效果自己调整
      */
     private float publicTextPosition = 2;
+    //设置文字所占块的比例 默认0.5
+    private float textSizeProportion = 0.5f;
 
     public BatteryView(Context context) {
         super(context);
@@ -159,11 +161,11 @@ public class BatteryView extends View {
             canvas.drawRect(rectF, mPaint);
             if (isSet) {
                 if (i == setProNum - 1) {
-                    drawRoundRect(i, canvas);
+                    drawRoundRect(i, canvas, mProgress);
                 }
             } else {
                 if (i == currentProNum - 1) {
-                    drawRoundRect(i, canvas);
+                    drawRoundRect(i, canvas, setCountProgress);
                 }
             }
         }
@@ -175,8 +177,9 @@ public class BatteryView extends View {
      *
      * @param position 当前进度所占最后一块 currentItemCoun
      * @param canvas
+     * @param progress 总进度
      */
-    private void drawRoundRect(int position, Canvas canvas) {
+    private void drawRoundRect(int position, Canvas canvas, int progress) {
         RectF rectRoundF = new RectF(position * mItemWidth + position * mSplitWidth,
                 0,
                 (position + 1) * mItemWidth + position * mSplitWidth,
@@ -207,7 +210,7 @@ public class BatteryView extends View {
         int baseLineY = (int) (rectF.centerY() - top / 2 - bottom / 2 + (mItemHeight / publicTextPosition));//基线中间点的y轴计算公式
         //根据文字的初始大小以及绘制宽度 获取宽度与大小的比例 在根据rectf的宽度计算文字的大小
         float width = Math.abs(fontMetrics.ascent) + Math.abs(fontMetrics.descent);
-        float size = (width / 24f) * (rectF.width() * 0.5f);
+        float size = (width / 24f) * (rectF.width() * textSizeProportion);
         textPaint.setTextSize(size);
         canvas.drawText(msg, rectF.centerX(), baseLineY, textPaint);
     }
@@ -241,7 +244,7 @@ public class BatteryView extends View {
      * <p>
      * {@link #setProNum} 属性用于区分属性动画的
      * (既({@link #drawProgress(Canvas)中的currentProNum}))设置的进度应该是第多少块
-     * {@link #setProgress} 属性用去区分{@link #mProgress} 设置的进度
+     * {@link #setCountProgress} 属性用去区分{@link #mProgress} 设置的进度
      * 因为属性动画关联了{@link #mProgress} 所以如果不用另外的属性记录 第多少块和总进度
      * 就会出现一种诡异的现象。。下面你可能卡不明白 但是你可以换成(i==currentProNum-1) 运行试试。。。
      * 因为需要在第n块的时候绘制下半部分 如果直接用{@link #mProgress} 因为关联属性动画的进度
@@ -251,16 +254,16 @@ public class BatteryView extends View {
      * 因为currentProNum每次都在变化
      * 所以用属性{@link #setProNum}单独记录是第多少块绘制下半部分
      * 同理 {@link #mProgress} 因为属性动画关联也会从0 一直增加到设置的进度值
-     * 所以此处用属性{@link #setProgress} 单独记录设置的进度
+     * 所以此处用属性{@link #setCountProgress} 单独记录设置的进度
      */
     int setProNum;
-    int setProgress;
+    int setCountProgress;
     //是否通过setCurrentProgress 用来区分是否xml 设置进度 走不同逻辑分别显示最后一块的下半部分
     boolean isSet;
 
     public void setCurrentProgress(int progress) {
         isSet = true;
-        setProgress = progress;
+        setCountProgress = progress;
         setProNum = (int) (progress / averageProgress);
         setProgress(progress);
     }
