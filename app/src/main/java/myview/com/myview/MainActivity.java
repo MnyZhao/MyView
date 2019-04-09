@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mCvView.closeAnimation(100);
                 break;
             case R.id.btn_set:
-                mBv.setCurrentProgress(100);
+                mBv.setCurrentProgress(55);
                 mBv.setAnimation();
                 break;
         }

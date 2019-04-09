@@ -117,7 +117,7 @@ public class BatteryView extends View {
     }
 
     /**
-     * 在onMesure中计算过了 所以这个方法在onDraw中就不调用了
+     * 在onMeasure中计算过了 所以这个方法在onDraw中就不调用了
      * 计算item 宽高 split 宽
      */
     private void calculate() {
