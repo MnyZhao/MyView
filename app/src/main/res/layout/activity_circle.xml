@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CircleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <myview.com.myview.circledemo.DonutProgress
+            android:id="@+id/donut_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:donut_finished_stroke_width="10dp"
+            custom:donut_inner_bottom_text="Loading..."
+            custom:donut_inner_bottom_text_color="#214193"
+            custom:donut_inner_bottom_text_size="10dp"
+            custom:donut_progress="70"
+            custom:donut_unfinished_stroke_width="5dp" />
+
+        <myview.com.myview.circledemo.DonutProgress
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:donut_background_color="#ffff00"
+            custom:donut_finished_color="#0000ff"
+            custom:donut_finished_stroke_width="10dp"
+            custom:donut_prefix_text="A"
+            custom:donut_progress="20"
+            custom:donut_suffix_text="$"
+            custom:donut_text_color="#000000"
+            custom:donut_text_size="16sp"
+            custom:donut_unfinished_color="#ff0000"
+            custom:donut_unfinished_stroke_width="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <myview.com.myview.circledemo.DonutProgress
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:donut_finished_stroke_width="10dp"
+            custom:donut_inner_bottom_text="MEMORY"
+            custom:donut_inner_bottom_text_color="#214193"
+            custom:donut_inner_bottom_text_size="10dp"
+            custom:donut_progress="20"
+            custom:donut_unfinished_color="#00ff00" />
+
+        <myview.com.myview.circledemo.DonutProgress
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:donut_finished_stroke_width="10dp"
+            custom:donut_progress="20"
+            custom:donut_unfinished_color="#ff0000"
+            custom:donut_unfinished_stroke_width="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <myview.com.myview.circledemo.ArcProgress
+            android:id="@+id/arc_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#214193"
+            custom:arc_bottom_text="MEMORY"
+            custom:arc_progress="10" />
+
+        <myview.com.myview.circledemo.ArcProgress
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
+            android:background="#214193"
+            custom:arc_bottom_text="STORAGE"
+            custom:arc_finished_color="#ffffff"
+            custom:arc_progress="30"
+            custom:arc_suffix_text="#"
+            custom:arc_text_color="#ffffff"
+            custom:arc_unfinished_color="#ff0000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <myview.com.myview.circledemo.CircleProgress
+            android:id="@+id/circle_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            custom:circle_progress="10" />
+
+        <myview.com.myview.circledemo.CircleProgress
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp"
+            custom:circle_finished_color="#ff0000"
+            custom:circle_progress="25"
+            custom:circle_suffix_text="$"
+            custom:circle_text_color="#ffffff"
+            custom:circle_text_size="16sp"
+            custom:circle_unfinished_color="#00ff00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <myview.com.myview.view.RoundProgress
+            android:id="@+id/rp_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            custom:c_angle="-90"
+            custom:c_path_stroke_cap="BUTT"
+            custom:c_progress="80"
+            custom:c_progress_color="#06D1A7"
+            custom:c_round_color="#00A5ED"
+            custom:c_round_stroke_width="15dp" />
+
+        <myview.com.myview.view.RoundProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            custom:c_angle="0"
+            custom:c_path_stroke_cap="BUTT"
+            custom:c_progress="80"
+            custom:c_progress_color="#06D1A7"
+            custom:c_round_color="#00A5ED"
+            custom:c_round_stroke_width="15dp" />
+
+        <myview.com.myview.view.RoundProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            custom:c_angle="90"
+            custom:c_path_stroke_cap="BUTT"
+            custom:c_progress="80"
+            custom:c_progress_color="#06D1A7"
+            custom:c_round_color="#00A5ED"
+            custom:c_round_stroke_width="15dp" />
+
+        <myview.com.myview.view.RoundProgress
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            custom:c_angle="180"
+            custom:c_path_stroke_cap="BUTT"
+            custom:c_progress="80"
+            custom:c_progress_color="#06D1A7"
+            custom:c_round_color="#00A5ED"
+            custom:c_round_stroke_width="15dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="setProgress"
+        android:textAllCaps="false" />
+</LinearLayout>

@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnStop.setOnClickListener(this);
         mBv = findViewById(R.id.bv);
         findViewById(R.id.btn_set).setOnClickListener(this);
+        findViewById(R.id.btn_go_circle).setOnClickListener(this);
     }
 
     @Override
@@ -59,11 +60,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mCvView.setAnimation();
                 break;
             case R.id.btnStop:
-                mCvView.closeAnimation(100);
+                mCvView.closeAnimation(90);
                 break;
             case R.id.btn_set:
                 mBv.setCurrentProgress(55);
                 mBv.setAnimation();
+                break;
+            case R.id.btn_go_circle:
+                CircleActivity.start(MainActivity.this);
                 break;
         }
     }

@@ -9,6 +9,62 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="展示充电动画" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="停止充电动画" />
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="setProgress"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_go_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="Go_Circle"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_blue"
+        android:backgroundTint="@color/colorAccent"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="充电"
+        android:textColor="@color/colorAccent" />
+
+    <myview.com.myview.view.BatteryView
+        android:id="@+id/bv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:b_anim_duration="2"
+        app:b_border_cornor_radius="1dp"
+        app:b_item_count="10"
+        app:b_item_end_color="#FF8869"
+        app:b_item_start_color="#1E69FE"
+        app:b_progress="57" />
+
     <myview.com.myview.view.ChargeView
         android:id="@+id/cv_view"
         android:layout_width="wrap_content"
@@ -33,50 +89,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"></myview.com.myview.view.ClearEditTextPwd>
-
-    <Button
-        android:id="@+id/btnStart"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:text="展示充电动画" />
-
-    <Button
-        android:id="@+id/btnStop"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:text="停止充电动画" />
-
-    <myview.com.myview.view.BatteryView
-        android:id="@+id/bv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:b_anim_duration="2"
-        app:b_border_cornor_radius="1dp"
-        app:b_item_count="10"
-        app:b_item_end_color="#FF8869"
-        app:b_item_start_color="#1E69FE"
-        app:b_progress="57" />
-
-    <Button
-        android:id="@+id/btn_set"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="setProgress" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/shape_blue"
-        android:backgroundTint="@color/colorAccent"
-        android:paddingLeft="6dp"
-        android:paddingRight="6dp"
-        android:text="充电"
-        android:textColor="@color/colorAccent" />
 </LinearLayout>

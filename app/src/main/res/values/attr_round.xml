@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Round_Progress">
+        <!--进度-->
+        <attr name="c_progress" format="integer" />
+        <attr name="c_max_progress" format="integer" />
+        <!--进度条底色-->
+        <attr name="c_round_color" format="color" />
+        <!--进度条进度中的颜色-->
+        <attr name="c_progress_color" format="color" />
+        <!--中间文字的颜色-->
+        <attr name="c_text_color" format="color" />
+        <!--底色进度画笔宽度 圆环宽度-->
+        <attr name="c_round_stroke_width" format="dimension" />
+        <!--中间文字的大小-->
+        <attr name="c_text_size" format="dimension" />
+        <attr name="c_is_show_text" format="boolean" />
+        <!--进度中进度条画笔的末端样式-->
+        <attr name="c_path_stroke_cap">
+            //正常路径结束
+            <enum name="BUTT" value="0" />
+            //半圆突出圆心在尽头
+            <enum name="ROUND" value="1" />
+            //方形突出中心在末端
+            <enum name="SQUARE" value="2" />
+        </attr>
+        <!--设置开始的角度 -90 正上方 0 右侧中间位置 90 正下方 180 左侧中间位置 默认-90-->
+        <attr name="c_angle" format="integer" />
+    </declare-styleable>
+</resources>
