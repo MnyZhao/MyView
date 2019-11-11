@@ -22,6 +22,9 @@
             android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name="myview.com.rlv_grid_3_2.RLv32Activity">
+
+        </activity>
     </application>
 
 </manifest>
